@@ -24,8 +24,18 @@ for (let z = 0; z < 100; z = z + 10) {
         nome = "Luiz";
     }
     if(z == 80 && nome == "Luiz") {
-        console.log(`Feito o nome é ${nome} e Z é ${z}`)
+        console.log(`Feito o nome é ${nome} e Z é ${z}`);
         break //break é utilizado para abortar um bloco de codigo no exemplo um for.
     }
-    console.log(z)
+    console.log(z);
+}
+
+// continue para pular uma execução do loop
+
+for(p = 10; p > 0; p = p - 1) {
+    if(p % 2 == 0){
+        console.log("Aqui tem continue");
+        continue;
+    }
+    console.log(p);   
 }
