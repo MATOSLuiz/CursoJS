@@ -116,3 +116,18 @@ function bemvindo(nome, idade) {
 
 console.log(bemvindo("Luiz",15))
 console.log(bemvindo("Luiz"));
+
+console.log("\n");
+console.log("\n");
+console.log("\n");
+
+//argumentos default
+
+function potencia(base, exp = 1) {
+    return Math.pow(base, exp);
+}
+
+console.log(potencia(8));
+
+console.log(potencia(4,2));
+
