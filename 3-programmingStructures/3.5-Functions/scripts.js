@@ -74,12 +74,45 @@ let mult = (a,b) => {
 
 console.log(mult(12,2))
 
+console.log("\n");
+console.log("\n");
+console.log("\n");
+
 //exemplo mais enxuto 
 
 let numeroCubo = x => x * x * x; 
 
 console.log(numeroCubo(2));
 
+console.log("\n");
+console.log("\n");
+console.log("\n");
 
+//argumentos opcionais
 
+function imc(peso,altura) {
+    if(peso === undefined || altura === undefined) {
+        console.log("Para tirar seu IMC precisamos do seu peso(kg) e da sua altura(m).");
+    } else {
+        return "Seu imc é " + peso / altura ** 2;
+    }
+}
 
+console.log(imc(15));
+
+console.log(imc(65,1.87))
+
+console.log("\n");
+console.log("\n");
+console.log("\n");
+
+function bemvindo(nome, idade) {
+    if(idade === undefined) {
+        console.log(`Bem vindo: ${nome}`);
+    } else {
+        console.log(`Bem vindo ${nome} você tem ${idade} anos!`);
+    }
+}
+
+console.log(bemvindo("Luiz",15))
+console.log(bemvindo("Luiz"));
