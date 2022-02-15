@@ -131,3 +131,23 @@ console.log(potencia(8));
 
 console.log(potencia(4,2));
 
+console.log("\n");
+console.log("\n");
+console.log("\n");
+
+//Closure
+
+function sum (x) {
+    return function (y) {
+        return x + y;
+    }
+}
+
+let soma20 = sum(20);
+let soma78 = sum(78);
+
+console.log((soma20(10)));
+console.log((soma20(18)));
+
+console.log(soma78(22));
+console.log(soma78(23));
