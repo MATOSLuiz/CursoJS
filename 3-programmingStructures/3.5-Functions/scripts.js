@@ -62,6 +62,23 @@ console.log("\n");
 console.log("\n");
 console.log("\n");
 
+let message = () => {
+    console.log("Javascript é legal!");
+};
+
+message();
+
+let mult = (a,b) => {
+    return a * b;
+}
+
+console.log(mult(12,2))
+
+//exemplo mais enxuto 
+
+let numeroCubo = x => x * x * x; 
+
+console.log(numeroCubo(2));
 
 
 
