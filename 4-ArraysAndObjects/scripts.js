@@ -241,5 +241,64 @@ console.log("\n");
 
 console.log(carros.reverse());
 
+console.log("\n");
+console.log("\n");
+console.log("\n");
+//METODOS DE STRINGS
 
+//trim() remove tudo que não é string
 
+let email = "\n       Segue relatório em anexo \n" ;
+
+let emailCorrect = email.trim();
+
+console.log(email);
+console.log(emailCorrect);
+
+console.log("\n");
+console.log("\n");
+
+//Padstart() Adiciona caracteres no começo da string com isso pode padronizar oq recebemos
+
+let digitoBancoDoBrasil = "1";
+
+console.log(digitoBancoDoBrasil.padStart(5,"0"));
+
+console.log("\n");
+console.log("\n");
+
+// split() divide uma string por um separador e retorna um array
+
+let hotDog = "Pão,Salsicha,Molho de Tomate,Sal,Pimenta do reino,Macarrão";
+
+console.log(hotDog.split(","));
+
+console.log("\n");
+console.log("\n");
+
+//join() junta elementos de um array e transforma em frase por um separador.
+
+let frase = "Panela velha é que faz comida boa";
+
+let arrFrase = frase.split(" ")
+
+let novaFrase = arrFrase.join("-");
+
+console.log(arrFrase)
+console.log(novaFrase);
+
+console.log("\n");
+console.log("\n");
+
+// repeat() Repete uma string de acordo com o parametro que a gente passa.
+
+let girassol = "gira ";
+
+music = girassol.repeat(8) + "Sol";
+
+console.log(music);
+
+//Alceu Valença é bom demais
+
+console.log("\n");
+console.log("\n");
