@@ -328,3 +328,39 @@ let [Material1, Material2, Material3, Material4] = materialEscolar;
 console.log(Material1);
 console.log(Material4);
 
+console.log("\n");
+console.log("\n");
+
+//JSON Uitlizado para comunicação entre serviços EX: APIS, Front<->back
+
+const dev = {
+    "Nome": "Luiz",
+    "Stack": "Javascript"
+}
+
+console.log(dev.Stack);
+console.log(dev.Nome);
+
+console.log("\n");
+console.log("\n");
+
+// JSON para string e string para JSON
+
+let dog = {
+    "nome": "Apollo",
+    "anoNasc" : 2018,
+    "anoFalecimento": 2022
+}
+
+let dogTexto = JSON.stringify(dog);
+
+console.log(dogTexto);
+
+let dogJSON = JSON.parse(dogTexto);
+
+console.log(dogJSON.nome);
+
+
+
+
+
