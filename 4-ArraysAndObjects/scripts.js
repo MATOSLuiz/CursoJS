@@ -302,3 +302,29 @@ console.log(music);
 
 console.log("\n");
 console.log("\n");
+
+//Destructuring com objetos podemos definir variaveis com as propriedades de um objeto
+
+const luiz = {
+    age: 18,
+    height : 1.83
+}
+
+const {age: idade, height: altura} = luiz;
+
+console.log(idade);
+console.log(altura);
+
+console.log("\n");
+console.log("\n");
+
+
+//Destructuring com arrays: podemos definir variaveis com valores de um array
+
+let materialEscolar = ["Caneta", "Borracha", "Lápis", "Caderno"];
+
+let [Material1, Material2, Material3, Material4] = materialEscolar;
+
+console.log(Material1);
+console.log(Material4);
+
