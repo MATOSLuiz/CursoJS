@@ -77,8 +77,28 @@ console.log(germanShepherd.breed);
 
 console.log("\n")
 
+// Instaciando classe por função constructor com function 
 
+function criarCachorro(raca,cor) {
+    let cachorro = Object.create({});
+    cachorro.raca = raca;
+    cachorro.cor = cor;
+    return cachorro; 
+}
 
+let shitzu = criarCachorro("Shi-tzu", "Branco com manchas amarelas");
 
+console.log(shitzu)
 
+// Instanciando com o new
+
+function Livro(titulo,numeroPaginas,volume) {
+    this.titulo = titulo;
+    this.numeroPaginas = numeroPaginas;
+    this.volume = volume;
+}
+
+let harryPotter1 = new Livro("Harry Potter e a Pedra Filosofal", 34, 1);
+
+console.log(harryPotter1.titulo);
 
