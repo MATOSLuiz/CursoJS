@@ -39,3 +39,22 @@ computador.setProcessador("Ryzen 5");
 console.log(computador.processador);
 
 console.log(computador.getProcessador());
+
+console.log("\n");
+
+//Prototypes
+
+const person = {
+    dedos: 20
+}
+
+console.log(Object.getPrototypeOf(person));
+console.log(person.hasOwnProperty("dedos"));
+
+
+//Herança; o objeto newPerson herda as propriedades do objeto person e do Object nativo.
+const newPerson = Object.create(person);
+
+console.log(newPerson.dedos);
+
+console.log(Object.getPrototypeOf(newPerson) === person);
