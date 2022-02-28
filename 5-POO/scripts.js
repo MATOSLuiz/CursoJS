@@ -58,3 +58,27 @@ const newPerson = Object.create(person);
 console.log(newPerson.dedos);
 
 console.log(Object.getPrototypeOf(newPerson) === person);
+
+console.log("\n");
+
+//Classes
+
+const dog = {
+    eyes: 2,
+    paws: 4,
+    breed: "NDB"
+}
+
+let germanShepherd = Object.create(dog);
+
+germanShepherd.breed = "German Sherphed";
+
+console.log(germanShepherd.breed);
+
+console.log("\n")
+
+
+
+
+
+
