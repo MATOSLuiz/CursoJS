@@ -90,6 +90,8 @@ let shitzu = criarCachorro("Shi-tzu", "Branco com manchas amarelas");
 
 console.log(shitzu)
 
+console.log("\n");
+
 // Instanciando com o new
 
 function Livro(titulo,numeroPaginas,volume) {
@@ -98,7 +100,128 @@ function Livro(titulo,numeroPaginas,volume) {
     this.volume = volume;
 }
 
-let harryPotter1 = new Livro("Harry Potter e a Pedra Filosofal", 34, 1);
+let harryPotter1 = new Livro("Harry Potter e a Pedra Filosofal", 250, 1);
 
 console.log(harryPotter1.titulo);
+
+// Métodos no prototype
+
+let harryPotter2 = new Livro("Harry Potter e A Câmara Secreta, 300, 2");
+
+Livro.prototype.autora = "J.K Rowling";
+
+console.log(harryPotter2.autora);
+
+console.log("\n");
+
+// Construtor na classe (ES6)
+
+class Produto {
+    constructor(nome,quantidade,valor) {
+        this.nome = nome;
+        this.quantidade = quantidade;
+        this.valor = valor;
+    }
+}
+
+let salgado = new Produto("Esfirra", 2, 3.50);
+
+console.log(salgado);
+console.log("\n");
+
+//Override no prototype
+
+class Filme {
+    constructor(indicacao) {
+        this.indicacao = indicacao;
+    }
+}
+
+Filme.prototype.indicacao = "Livre para todos os públicos"
+
+let deadpool = new Filme("18+");
+
+console.log(Filme.prototype.indicacao);
+console.log(deadpool.indicacao);
+
+console.log("\n")
+
+// Métodos e propriedades em uma classe e Symbol
+
+class Bola {
+    constructor(marca,modalidade) {
+        this.marca = marca;
+        this.modalidade = modalidade;
+    }
+}
+
+let formato = Symbol();
+
+Bola.prototype[formato] = "Redonda";
+
+let bolaFutsal = new Bola("Adidas", "Futsal");
+
+console.log(Bola.prototype[formato]);
+
+console.log(bolaFutsal[formato]);
+
+console.log("\n")
+
+//Getters e Setters
+
+class Celular {
+    constructor(marca,modelo,cor){
+        this.marca = marca;
+        this.modelo = modelo;
+        this.cor = cor;
+    }
+
+    get getCor() {
+        return this.cor;
+    }
+
+    set setCor(cor) {
+        this.cor = cor;
+    }
+}
+
+let samsung = new Celular("Samsung","S22","Sem cor");
+
+console.log(samsung);
+
+samsung.setCor = "Azul Marinho";
+
+console.log(samsung.getCor);
+
+console.log("\n");
+
+// Herança
+
+class Tablet {
+    constructor(tela) {
+        this.tela = tela;
+    }
+}
+
+let samsung2 = new Tablet(true);
+
+console.log(samsung2.tela);
+
+class Ipad extends Tablet {
+    constructor(marca,tela) {
+        super(tela,tela);
+        this.marca = marca;
+    }
+}
+
+let apple = new Ipad("Apple", true);
+
+console.log(apple.tela);
+
+// InstanceOf
+
+console.log(new Ipad instanceof Tablet);
+
+console.log(apple instanceof Tablet);
+
 
